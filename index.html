@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>🍼 奶龙大学士的博客</title>
+    <!-- 圆润童趣字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- 引入外部样式 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+        <!-- 左侧导航 -->
+        <aside class="nav-side">
+            <div class="logo-area">
+                <div class="logo">🐉 奶龙</div>
+                <div class="logo-sub">NaiLong's Den</div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active" data-section="home"><span class="index">🏠</span> 首页</a></li>
+                <li class="nav-item"><a href="#works" class="nav-link" data-section="works"><span class="index">🎨</span> 项目</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link" data-section="about"><span class="index">🐣</span> 关于我</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link" data-section="contact"><span class="index">✉️</span> 联系我吧 </a></li>
+            </ul>
+            <div class="nav-footer">
+                <span>⭐ 一起玩耍吧 ⭐</span><br>
+                <span>☁️ 小七也在哟</span>
+            </div>
+        </aside>
+
+        <!-- 右侧主要内容 (滚动吸附) -->
+        <main class="main-content">
+            <!-- HOME 区块 -->
+            <section id="home" class="section hero" style="background-image: url('home.jpg');">
+                <div class="hero-greeting">🐾 嗷呜～ 欢迎来到奶龙大学士的小天地 🐾</div>
+                <div class="hero-name">奶龙大学士<br>Nai Long</div>
+                <div class="hero-title">🍼 治愈系小画家 · 梦想收藏家</div>
+                <p class="hero-desc">
+                    我最喜欢和朋友们一起探险，然后把快乐画下来！<br>
+                    这里装着我的小作品、小秘密，还有好多星星～
+                </p>
+                <a href="#works" class="cta-button">去看看宝藏 ✨</a>
+            </section>
+
+            <!-- WORKS 区块 -->
+            <section id="works" class="section" style="background-image: url('project.jpg');">
+                <h2 class="section-title"><span class="accent">🧸</span> 奶龙的宝藏盒子</h2>
+                <div class="works-grid">
+                    <a href="https://github.com/BigDaddy118/-" target="_blank" class="work-card">
+                        <div class="card-img" style="background: #FFEAB3;">🌟✨</div>
+                        <div class="card-content">
+                            <div class="card-title">成为卡尔高手吧</div>
+                            <div class="card-tags"><span class="tag">小游戏</span><span class="tag">HTML</span></div>
+                            <div class="card-desc">和奶龙一起接住掉落的星星！</div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/BigDaddy118/-RAG-" target="_blank" class="work-card">
+                        <div class="card-img" style="background: #FFDAB9;">🍬🍭</div>
+                        <div class="card-content">
+                            <div class="card-title">奶龙大学习</div>
+                            <div class="card-tags"><span class="tag">知识库</span><span class="tag">RAG</span></div>
+                            <div class="card-desc">自己搭配糖果口味的小工具～</div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/BigDaddy118/BigDaddy118.github.io" target="_blank" class="work-card">
+                        <div class="card-img" style="background: #B0E0FF;">☁️🌈</div>
+                        <div class="card-content">
+                            <div class="card-title">奶龙的自我介绍</div>
+                            <div class="card-tags"><span class="tag">博客</span><span class="tag">HTML</span></div>
+                            <div class="card-desc">软乎乎的云，点一点会弹起来哟！</div>
+                        </div>
+                    </a>
+                </div>
+                <p style="margin-top: 2.5rem; font-size: 1.2rem; color:#9B6A3A; background: rgba(255,255,240,0.6); padding: 0.8rem 2rem; border-radius: 60px; backdrop-filter: blur(4px); display: inline-block; border: 2px solid #FFD68A;">
+                    ⭐ 点一点卡片，就能去GitHub看我的秘密基地啦 ⭐
+                </p>
+            </section>
+
+            <!-- ABOUT 区块 -->
+            <section id="about" class="section" style="background-image: url('about me.jpg');">
+                <h2 class="section-title"><span class="accent">🐉</span> 奶龙的小档案</h2>
+                <div class="about-grid">
+                    <div class="about-avatar">
+                        <div class="avatar-placeholder">
+                            <img src="nailong.jpg" alt="我的头像" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <p style="margin-top:30px; color:#A45D2A; font-weight:700; font-size:1.3rem;">“每天都要可可爱爱！”</p>
+                    </div>
+                    <div>
+                        <p style="font-size:1.25rem; line-height:1.9; margin-bottom:2.2rem; background: rgba(255,255,235,0.7); padding:1.5rem; border-radius: 60px; backdrop-filter:blur(8px); border: 3px solid #FFE28C;">
+                            我是奶龙！来自第七印象的治愈小恐龙～<br>
+                            虽然有时候有点迷糊，但我最喜欢画画、交朋友，还有和小七一起冒险！希望我的作品能让你也笑起来 ☀️
+                        </p>
+                        <div class="skill-item">
+                            <div class="skill-label"><span>🎨 涂鸦创造力</span><span>99%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width:99%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label"><span>🤗 治愈能量</span><span>100%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width:100%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-label"><span>💻 编程小探险</span><span>75%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width:75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT 区块 -->
+            <section id="contact" class="section" style="background-image: url('contact me.jpg');">
+                <h2 class="section-title"><span class="accent">📮</span> 给奶龙写信吧</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-text">1009264368@qq.com</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🐱</div>
+                        <div class="contact-text">GitHub: github.com/BigDaddy118</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🏡</div>
+                        <div class="contact-text">软绵绵云朵村 · 蘑菇信箱</div>
+                    </div>
+                </div>
+                <p style="margin-top:3.5rem; font-family:Quicksand; font-weight:800; color:#B0621E; font-size:1.6rem; background: rgba(255,255,240,0.6); padding: 0.5rem 2rem; border-radius: 60px; backdrop-filter: blur(4px); display: inline-block;">
+                    ☁️ 小七和我一起等你的消息哟 ☁️
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <!-- 引入外部脚本 -->
+    <script src="script.js"></script>
+</body>
+
+</html>
