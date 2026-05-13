@@ -605,3 +605,27 @@ body {
 .work-card.more-card:hover {
     background: #FFF3E0;
 }
+
+/* 让宝藏盒子一行显示4张卡片 */
+.works-grid {
+    display: flex;
+    flex-wrap: nowrap;         /* 强制不换行 */
+    gap: 20px;                 /* 卡片间距，根据原样式保留 */
+    justify-content: center;   /* 居中排列 */
+    overflow-x: auto;          /* 万一超宽，可以水平滚动（保险） */
+}
+
+.work-card {
+    flex: 0 0 calc(25% - 15px); /* 每张卡片宽度约25%，减去间距 */
+    min-width: 0;               /* 防止内容撑开 */
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .works-grid {
+        flex-wrap: wrap;        /* 小屏幕允许换行 */
+    }
+    .work-card {
+        flex: 0 0 calc(50% - 10px); /* 一行2张 */
+    }
+}
