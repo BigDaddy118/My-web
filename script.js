@@ -8,7 +8,7 @@
         maxCards: 3,                   // 最多显示的项目卡片数（不包含“更多”）
         fallbackDesc: '奶龙还在给这个宝藏写说明哦~',
         moreCardTitle: '查看更多项目',
-        moreCardDesc: '去我的GitHub主页发现更多宝藏~',
+        moreCardDesc: '去奶龙的GitHub主页发现更多宝藏~',
         moreCardBg: '#FFB347',
         errorMsg: '🌟 宝藏盒子暂时打不开，稍后再来看看吧~ 🌟',
         emptyMsg: '✨ 暂时还没有公开项目，先去 GitHub 创建一个吧~ ✨',
