@@ -124,7 +124,7 @@
 
             // 固定第8张卡片：“更多内容” → 链接到你的 GitHub 主页
             html += `
-                <a href="https://github.com/${username}" target="_blank" class="work-card">
+                <a href="https://github.com/${username}" target="_blank" class="work-card more-card">
                     <div class="card-img" style="background: #FFB347;">🔍</div>
                     <div class="card-content">
                         <div class="card-title">查看更多项目</div>
