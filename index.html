@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🍼 奶龙大学士的博客</title>
     <!-- 圆润童趣字体 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- 引入外部样式 -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <div class="app">
         <!-- 左侧导航 -->
         <aside class="nav-side">
@@ -49,13 +45,11 @@
             </section>
 
             <!-- WORKS 区块 -->
-<section id="works" class="section" style="background-image: url('project.jpg');">
-    <h2 class="section-title"><span class="accent">🧸</span> 奶龙的宝藏盒子</h2>
-    <div id="github-projects"></div>  <!-- 静态卡片已被替换，项目将自动显示在这里 -->
-    <p style="margin-top: 2.5rem; font-size: 1.2rem; color:#9B6A3A; background: rgba(255,255,240,0.6); padding: 0.8rem 2rem; border-radius: 60px; backdrop-filter: blur(4px); display: inline-block; border: 2px solid #FFD68A;">
-        ⭐ 点一点卡片，就能去GitHub看我的秘密基地啦 ⭐
-    </p>
-</section>
+            <section id="works" class="section" style="background-image: url('project.jpg');">
+                <h2 class="section-title"><span class="accent">🧸</span> 奶龙的宝藏盒子</h2>
+                <div id="github-projects"></div>
+                <p class="section-note">⭐ 点一点卡片，就能去GitHub看我的秘密基地啦 ⭐</p>
+            </section>
 
             <!-- ABOUT 区块 -->
             <section id="about" class="section" style="background-image: url('about me.jpg');">
@@ -63,7 +57,7 @@
                 <div class="about-grid">
                     <div class="about-avatar">
                         <div class="avatar-placeholder">
-                            <img src="nailong.jpg" alt="我的头像" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="nailong.jpg" alt="奶龙的头像" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <p style="margin-top:30px; color:#A45D2A; font-weight:700; font-size:1.3rem;">“每天都要可可爱爱！”</p>
                     </div>
@@ -74,21 +68,15 @@
                         </p>
                         <div class="skill-item">
                             <div class="skill-label"><span>🎨 涂鸦创造力</span><span>99%</span></div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width:99%"></div>
-                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:99%"></div></div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-label"><span>🤗 治愈能量</span><span>100%</span></div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width:100%"></div>
-                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-label"><span>💻 编程小探险</span><span>75%</span></div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width:75%"></div>
-                            </div>
+                            <div class="progress-bar"><div class="progress-fill" style="width:75%"></div></div>
                         </div>
                     </div>
                 </div>
@@ -100,26 +88,22 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="contact-icon">📧</div>
-                        <div class="contact-text">1009264368@qq.com</div>
+                        <div class="contact-text"><a href="mailto:1009264368@qq.com" style="color:inherit; text-decoration:none;">1009264368@qq.com</a></div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">🐱</div>
-                        <div class="contact-text">GitHub: github.com/BigDaddy118</div>
+                        <div class="contact-text"><a href="https://github.com/BigDaddy118" target="_blank" style="color:inherit; text-decoration:none;">GitHub: github.com/BigDaddy118</a></div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">🏡</div>
                         <div class="contact-text">软绵绵云朵村 · 蘑菇信箱</div>
                     </div>
                 </div>
-                <p style="margin-top:3.5rem; font-family:Quicksand; font-weight:800; color:#B0621E; font-size:1.6rem; background: rgba(255,255,240,0.6); padding: 0.5rem 2rem; border-radius: 60px; backdrop-filter: blur(4px); display: inline-block;">
-                    ☁️ 小七和我一起等你的消息哟 ☁️
-                </p>
+                <p class="section-note">☁️ 小七和我一起等你的消息哟 ☁️</p>
             </section>
         </main>
     </div>
 
-    <!-- 引入外部脚本 -->
     <script src="script.js"></script>
 </body>
-
 </html>
