@@ -598,3 +598,10 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
+
+.work-card.more-card {
+    border: 2px dashed #FFB347;
+}
+.work-card.more-card:hover {
+    background: #FFF3E0;
+}
