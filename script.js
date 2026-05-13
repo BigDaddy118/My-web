@@ -122,7 +122,7 @@
                 `;
             });
 
-            // 固定第8张卡片：“更多内容” → 链接到你的 GitHub 主页
+            // 固定第4张卡片：“更多内容” → 链接到你的 GitHub 主页
             html += `
                 <a href="https://github.com/${username}" target="_blank" class="work-card more-card">
                     <div class="card-img" style="background: #FFB347;">🔍</div>
