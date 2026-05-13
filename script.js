@@ -6,7 +6,7 @@
         username: 'BigDaddy118',
         excludeRepos: ['My-web'],       // 不想显示在卡片里的仓库名
         maxCards: 3,                   // 最多显示的项目卡片数（不包含“更多”）
-        fallbackDesc: '这个项目还没有写描述~',
+        fallbackDesc: '奶龙还在给这个宝藏写说明哦~',
         moreCardTitle: '查看更多项目',
         moreCardDesc: '去我的GitHub主页发现更多宝藏~',
         moreCardBg: '#FFB347',
