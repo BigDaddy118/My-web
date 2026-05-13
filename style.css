@@ -571,3 +571,15 @@ body {
         flex: 0 0 calc(50% - 10px) !important;
     }
 }
+
+.section-note {
+    margin-top: 2.5rem;
+    font-size: 1.2rem;
+    color: #9B6A3A;
+    background: rgba(255,255,240,0.6);
+    padding: 0.8rem 2rem;
+    border-radius: 60px;
+    backdrop-filter: blur(4px);
+    display: inline-block;
+    border: 2px solid #FFD68A;
+}
