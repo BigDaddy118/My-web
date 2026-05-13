@@ -83,54 +83,64 @@
 
     // ==================== 自动获取 GitHub 项目 ====================
     function loadGitHubProjects() {
-        const container = document.getElementById('github-projects');
-        if (!container) return; // 页面上没有容器就不执行
+    const container = document.getElementById('github-projects');
+    if (!container) return;
 
-        const username = 'BigDaddy118';
-        const apiUrl = `https://api.github.com/users/${username}/repos?sort=updated&per_page=100`;
+    const username = 'BigDaddy118';
+    const apiUrl = `https://api.github.com/users/${username}/repos?sort=updated&per_page=100`;
 
-        fetch(apiUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('网络响应不正常');
-                }
-                return response.json();
-            })
-            .then(repos => {
-                // 过滤：排除 fork 的仓库，以及自己的网站仓库（避免重复）
-                const filteredRepos = repos; // 暂时不过滤，查看所有仓库
+    fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) throw new Error('网络响应不正常');
+            return response.json();
+        })
+        .then(repos => {
+            // 过滤规则（你可以按需调整）
+            const filteredRepos = repos.filter(repo => repo.name !== 'My-web');
 
-                if (filteredRepos.length === 0) {
-                    container.innerHTML = '<p style="text-align:center; color:#9B6A3A;">✨ 暂时还没有公开项目，先去 GitHub 创建一个吧~ ✨</p>';
-                    return;
-                }
+            // 取前7个仓库作为展示项目
+            const showRepos = filteredRepos.slice(0, 7);
 
-                let html = '<div class="works-grid">'; // 复用原来的网格布局样式
-                filteredRepos.forEach(repo => {
-                    html += `
-                        <a href="${repo.html_url}" target="_blank" class="work-card">
-                            <div class="card-img" style="background: #${getRandomColor()};">
-                                ${repo.language ? repo.language : '📦'}
+            let html = '<div class="works-grid">';
+
+            // 生成前7张项目卡片（或不足7张时全显示）
+            showRepos.forEach(repo => {
+                html += `
+                    <a href="${repo.html_url}" target="_blank" class="work-card">
+                        <div class="card-img" style="background: #${getRandomColor()};">
+                            ${repo.language ? repo.language : '📦'}
+                        </div>
+                        <div class="card-content">
+                            <div class="card-title">${repo.name}</div>
+                            <div class="card-tags">
+                                ${repo.language ? `<span class="tag">${repo.language}</span>` : ''}
+                                ${repo.stargazers_count > 0 ? `<span class="tag">⭐ ${repo.stargazers_count}</span>` : ''}
                             </div>
-                            <div class="card-content">
-                                <div class="card-title">${repo.name}</div>
-                                <div class="card-tags">
-                                    ${repo.language ? `<span class="tag">${repo.language}</span>` : ''}
-                                    ${repo.stargazers_count > 0 ? `<span class="tag">⭐ ${repo.stargazers_count}</span>` : ''}
-                                </div>
-                                <div class="card-desc">${repo.description || '这个项目还没有写描述~'}</div>
-                            </div>
-                        </a>
-                    `;
-                });
-                html += '</div>';
-                container.innerHTML = html;
-            })
-            .catch(error => {
-                console.error('获取 GitHub 项目失败:', error);
-                container.innerHTML = '<p style="text-align:center; color:#9B6A3A;">🌟 宝藏盒子暂时打不开，稍后再来看看吧~ 🌟</p>';
+                            <div class="card-desc">${repo.description || '这个项目还没有写描述~'}</div>
+                        </div>
+                    </a>
+                `;
             });
-    }
+
+            // 固定第8张卡片：“更多内容” → 链接到你的 GitHub 主页
+            html += `
+                <a href="https://github.com/${username}" target="_blank" class="work-card">
+                    <div class="card-img" style="background: #FFB347;">🔍</div>
+                    <div class="card-content">
+                        <div class="card-title">查看更多项目</div>
+                        <div class="card-desc">去我的GitHub主页发现更多宝藏~</div>
+                    </div>
+                </a>
+            `;
+
+            html += '</div>';
+            container.innerHTML = html;
+        })
+        .catch(error => {
+            console.error('获取 GitHub 项目失败:', error);
+            container.innerHTML = '<p style="text-align:center; color:#9B6A3A;">🌟 宝藏盒子暂时打不开，稍后再来看看吧~ 🌟</p>';
+        });
+}
 
     // 随机生成淡色背景（让卡片颜色像原来一样活泼）
     function getRandomColor() {
