@@ -98,7 +98,7 @@
             })
             .then(repos => {
                 // 过滤：排除 fork 的仓库，以及自己的网站仓库（避免重复）
-                const filteredRepos = repos.filter(repo => !repo.fork && repo.name !== 'My-web');
+                const filteredRepos = repos; // 暂时不过滤，查看所有仓库
 
                 if (filteredRepos.length === 0) {
                     container.innerHTML = '<p style="text-align:center; color:#9B6A3A;">✨ 暂时还没有公开项目，先去 GitHub 创建一个吧~ ✨</p>';
