@@ -599,14 +599,6 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.work-card.more-card {
-    /*border: 2px dashed #FFB347;*/
-    border: 2px solid #FFB347;
-}
-.work-card.more-card:hover {
-    background: #FFF3E0;
-}
-
 /* 让宝藏盒子一行显示4张卡片 */
 .works-grid {
     display: flex;
