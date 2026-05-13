@@ -647,3 +647,13 @@ body {
         flex: 0 0 calc(50% - 10px) !important;
     }
 }
+
+#works .works-grid {
+    overflow: visible;   /* 允许阴影溢出显示 */
+    padding-bottom: 10px; /* 预留空间给阴影 */
+}
+
+#works .work-card {
+    margin-bottom: 10px;  /* 增加卡片底部外边距，避免阴影贴底 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* 确认阴影存在 */
+}
