@@ -629,3 +629,28 @@ body {
         flex: 0 0 calc(50% - 10px); /* 一行2张 */
     }
 }
+
+/* 将宝藏盒子的布局从 grid 改为 flex，实现横排 */
+#works .works-grid {
+    display: flex !important;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+#works .work-card {
+    flex: 0 0 calc(25% - 15px) !important;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* 手机屏幕自动换行，避免卡片太小 */
+@media (max-width: 768px) {
+    #works .works-grid {
+        flex-wrap: wrap !important;
+    }
+    #works .work-card {
+        flex: 0 0 calc(50% - 10px) !important;
+    }
+}
