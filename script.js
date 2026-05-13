@@ -98,12 +98,12 @@
             // 过滤规则（你可以按需调整）
             const filteredRepos = repos.filter(repo => repo.name !== 'My-web');
 
-            // 取前7个仓库作为展示项目
-            const showRepos = filteredRepos.slice(0, 7);
+            // 取前3个仓库作为展示项目
+            const showRepos = filteredRepos.slice(0, 3);
 
             let html = '<div class="works-grid">';
 
-            // 生成前7张项目卡片（或不足7张时全显示）
+            // 生成前3张项目卡片（或不足3张时全显示）
             showRepos.forEach(repo => {
                 html += `
                     <a href="${repo.html_url}" target="_blank" class="work-card">
